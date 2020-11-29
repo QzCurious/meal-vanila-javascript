@@ -1,0 +1,63 @@
+@keyframes clip-to-right {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    100% {
+        clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+}
+
+@keyframes clip-to-left {
+    0% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    100% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0 99%);
+    }
+}
+
+.fill-to-right {
+    animation: clip-to-left reverse 0.3s linear;
+}
+
+.clip-to-right {
+    animation: clip-to-right 0.3s linear;
+}
+
+.fill-to-left {
+    animation: clip-to-right reverse 0.3s linear;
+}
+
+.clip-to-left {
+    animation: clip-to-left 0.3s linear;
+}
+
+@keyframes rotate-in {
+    from {
+        transform: rotate(-45deg);
+    }
+
+    to {
+        transform: rotate(0);
+    }
+}
+
+@keyframes rotate-out {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+.rotate--in {
+    animation: rotate-in 0.3s linear;
+}
+
+.rotate--out {
+    animation: rotate-out 0.3s linear;
+}
