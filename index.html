@@ -3,30 +3,34 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>meal</title>
+  <title>dish</title>
   <link rel="stylesheet" href="css/main.css" type="text/css">
-  <script src="js/main.js" defer></script>
+  <script src="./js/helpers.js" defer></script>
+  <script src="./js/meal.js" defer></script>
+  <script src="./js/main.js" defer></script>
 </head>
 
 <body>
   <main>
-    <article class="meal">
-      <img class="meal__img" src="./images/meal1.png" alt="" />
-      <div class="meal__desc">
-        <div class="tag">#2 Most loved meal</div>
-        <h2 class="meal__title">
-          <div>Lamb Steak</div>
-          <div>Potato</div>
-        </h2>
-        <div class="actions">
-          <button class="meal__play play">Play video</button>
-          <button class="meal__order link">Order food</button>
+    <template class="meal-template">
+      <article class="meal">
+        <img class="meal__img" src="{{ img }}" alt="" />
+        <div class="meal__desc">
+          <div class="tag">{{ tag }}</div>
+          <h2 class="meal__title">
+            <div>{{ title1 }}</div>
+            <div>{{ title2 }}</div>
+          </h2>
+          <div class="meal__actions">
+            <button class="meal__play play">Play video</button>
+            <button class="meal__order link">Order food</button>
+          </div>
         </div>
-      </div>
-    </article>
+      </article>
+      <button class="next">next</button>
+    </template>
   </main>
 
-  <button class="next">next</button>
 </body>
 
 </html>
